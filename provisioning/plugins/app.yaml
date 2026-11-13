@@ -1,0 +1,15 @@
+apiVersion: 1
+
+apps:
+  - type: 'mcd-nextcommandcenter-app'
+    org_id: 1
+    org_name: 'MCD'
+    disabled: false
+    jsonData:
+      # The browser key for the store map, and the agents' flow (empty: example answers).
+      googleMapsApiKey: ''
+      agentFlowUrl: ''
+      apiUrl: http://default-url.com
+      isApiKeySet: true
+    secureJsonData:
+      apiKey: secret-key

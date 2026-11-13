@@ -1,0 +1,15 @@
+{
+  "extends": "./.config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // The Command Center's code (src/next) imports itself as `@/…`.
+      "@/*": ["src/next/*"],
+      "*": ["src/*"]
+    },
+    // The automatic JSX runtime (no `import React`); see webpack.config.ts.
+    "jsx": "react-jsx",
+    "types": ["jest", "node"]
+  },
+  "include": ["src", ".config/types"]
+}

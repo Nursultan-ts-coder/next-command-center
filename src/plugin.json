@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "app",
+  "name": "NEXT Command Center",
+  "id": "mcd-nextcommandcenter-app",
+  "backend": true,
+  "executable": "gpx_nextcommandcenter",
+  "info": {
+    "keywords": [
+      "app",
+      "restaurants",
+      "next",
+      "stores",
+      "drive-thru",
+      "incidents"
+    ],
+    "description": "NEXT Command Center: the store map, each store's 3D view and drive-thru, orders, network, incidents and cases, and Agent Q.",
+    "author": {
+      "name": "Mcd"
+    },
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "screenshots": [
+      {
+        "name": "Global",
+        "path": "img/screenshots/global.png"
+      }
+    ],
+    "version": "%VERSION%",
+    "updated": "%TODAY%",
+    "links": [
+      {
+        "name": "Source code",
+        "url": "https://github.com/OWNER/REPO"
+      },
+      {
+        "name": "Issues",
+        "url": "https://github.com/OWNER/REPO/issues"
+      }
+    ]
+  },
+  "includes": [
+    {
+      "type": "page",
+      "name": "Command Center",
+      "path": "/a/%PLUGIN_ID%",
+      "addToNav": true,
+      "defaultNav": true
+    },
+    {
+      "type": "page",
+      "icon": "cog",
+      "name": "Configuration",
+      "path": "/plugins/%PLUGIN_ID%",
+      "role": "Admin",
+      "addToNav": true
+    }
+  ],
+  "dependencies": {
+    "grafanaDependency": ">=13.2.0",
+    "plugins": []
+  }
+}
