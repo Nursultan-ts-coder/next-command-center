@@ -6,14 +6,7 @@
   "backend": true,
   "executable": "gpx_nextcommandcenter",
   "info": {
-    "keywords": [
-      "app",
-      "restaurants",
-      "next",
-      "stores",
-      "drive-thru",
-      "incidents"
-    ],
+    "keywords": ["app", "restaurants", "next", "stores", "drive-thru", "incidents"],
     "description": "NEXT Command Center: the store map, each store's 3D view and drive-thru, orders, network, incidents and cases, and Agent Q.",
     "author": {
       "name": "Mcd"
@@ -30,16 +23,7 @@
     ],
     "version": "%VERSION%",
     "updated": "%TODAY%",
-    "links": [
-      {
-        "name": "Source code",
-        "url": "https://github.com/OWNER/REPO"
-      },
-      {
-        "name": "Issues",
-        "url": "https://github.com/OWNER/REPO/issues"
-      }
-    ]
+    "links": []
   },
   "includes": [
     {
