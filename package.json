@@ -28,7 +28,9 @@
     "grafana:open": "open http://localhost:3000/a/mcd-nextcommandcenter-app",
     "grafana:logs": "tail -f /opt/homebrew/var/log/grafana/grafana.log",
     "sign:private": "sign-plugin --distDir release/mcd-nextcommandcenter-app --rootUrls https://mcdobservability.grafana.net",
-    "package:private": "npm run build:all && rm -rf release && mkdir release && cp -R dist release/mcd-nextcommandcenter-app && npm run sign:private && cd release && zip -qr mcd-nextcommandcenter-app-$npm_package_version.zip mcd-nextcommandcenter-app && shasum mcd-nextcommandcenter-app-$npm_package_version.zip && echo Ready: release/mcd-nextcommandcenter-app-$npm_package_version.zip"
+    "package:private": "npm run build:all && rm -rf release && mkdir release && cp -R dist release/mcd-nextcommandcenter-app && npm run sign:private && cd release && zip -qr mcd-nextcommandcenter-app-$npm_package_version.zip mcd-nextcommandcenter-app && shasum mcd-nextcommandcenter-app-$npm_package_version.zip && echo Ready: release/mcd-nextcommandcenter-app-$npm_package_version.zip",
+    "sign:public": "sign-plugin --distDir release/mcd-nextcommandcenter-app",
+    "package:public": "npm run build:all && rm -rf release && mkdir release && cp -R dist release/mcd-nextcommandcenter-app && npm run sign:public && cd release && zip -qr mcd-nextcommandcenter-app-$npm_package_version.zip mcd-nextcommandcenter-app && shasum mcd-nextcommandcenter-app-$npm_package_version.zip && echo Ready: release/mcd-nextcommandcenter-app-$npm_package_version.zip"
   },
   "author": "Mcd",
   "license": "Apache-2.0",
@@ -108,7 +110,6 @@
     "@mui/material": "7.3.11",
     "chart.js": "4.6.1",
     "lodash": "4.18.1",
-    "prop-types": "15.8.1",
     "react": "^19.0.0",
     "react-chartjs-2": "5.3.1",
     "react-dom": "^19.0.0",

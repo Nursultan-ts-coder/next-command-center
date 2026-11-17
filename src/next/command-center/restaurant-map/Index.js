@@ -8,7 +8,6 @@ import mapStylesDark from './map-styles/map-styles.json';
 import mapStylesLightCountry from './map-styles/map-styles-light-country.json';
 import { repeatWhileShowing } from '../store-layout/visibility';
 import { StatusIcon } from '@/shared/components/icons';
-import PropTypes from 'prop-types';
 import { fetchMapStores } from '../data';
 import { mockCorrelation } from '../data/agent-mock';
 
@@ -349,10 +348,6 @@ return (
 );
 }
 
-EmptyState.propTypes = {
-title: PropTypes.string.isRequired,
-message: PropTypes.string.isRequired,
-};
 
 function loadGoogleMaps(apiKey) {
 return new Promise((resolve, reject) => {
@@ -2057,19 +2052,6 @@ Why &mdash; reasoning
 );
 }
 
-GoogleMapCanvas.propTypes = {
-width: PropTypes.number.isRequired,
-height: PropTypes.number.isRequired,
-stores: PropTypes.array.isRequired,
-mapId: PropTypes.string,
-initialLat: PropTypes.number.isRequired,
-initialLng: PropTypes.number.isRequired,
-initialZoom: PropTypes.number.isRequired,
-metricLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
-markerConfig: PropTypes.object.isRequired,
-mapTitle: PropTypes.string,
-metricConfigured: PropTypes.arrayOf(PropTypes.bool),
-};
 
 // The number of metric rows a store's pop-up can have (m1 … m5).
 const MAX_METRIC_SLOTS = 5;
@@ -2118,7 +2100,6 @@ return (
 );
 }
 
-AutoSizer.propTypes = { children: PropTypes.func.isRequired };
 
 function StoreMap({
 width,
@@ -2158,18 +2139,6 @@ metricConfigured={metricConfigured}
 );
 }
 
-StoreMap.propTypes = {
-width: PropTypes.number.isRequired,
-height: PropTypes.number.isRequired,
-mapId: PropTypes.string,
-initialLat: PropTypes.number.isRequired,
-initialLng: PropTypes.number.isRequired,
-initialZoom: PropTypes.number.isRequired,
-metricLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
-markerConfig: PropTypes.object.isRequired,
-mapTitle: PropTypes.string,
-metricConfigured: PropTypes.arrayOf(PropTypes.bool),
-};
 
 /*
  * The store map. Its props are the map's settings (data/index.js MAP_SETTINGS): what each
@@ -2297,56 +2266,5 @@ metricConfigured={metricConfigured}
 );
 }
 
-RestaurantMapVisualization.propTypes = {
-mapId: PropTypes.string,
-mapTitle: PropTypes.string,
-query2Label: PropTypes.string,
-query2WarningThreshold: PropTypes.number,
-query2CriticalThreshold: PropTypes.number,
-query2Direction: PropTypes.string,
-query2CriticalMatch: PropTypes.string,
-query3Label: PropTypes.string,
-query3WarningThreshold: PropTypes.number,
-query3CriticalThreshold: PropTypes.number,
-query3Direction: PropTypes.string,
-query3CriticalMatch: PropTypes.string,
-query4Label: PropTypes.string,
-query4WarningThreshold: PropTypes.number,
-query4CriticalThreshold: PropTypes.number,
-query4Direction: PropTypes.string,
-query4CriticalMatch: PropTypes.string,
-query5Label: PropTypes.string,
-query5WarningThreshold: PropTypes.number,
-query5CriticalThreshold: PropTypes.number,
-query5Direction: PropTypes.string,
-query5CriticalMatch: PropTypes.string,
-query6Label: PropTypes.string,
-query6WarningThreshold: PropTypes.number,
-query6CriticalThreshold: PropTypes.number,
-query6Direction: PropTypes.string,
-query6CriticalMatch: PropTypes.string,
-normalColor: PropTypes.string,
-warningColor: PropTypes.string,
-criticalColor: PropTypes.string,
-noDataColor: PropTypes.string,
-zeroBehavior: PropTypes.string,
-noDataBehavior: PropTypes.string,
-initialLat: PropTypes.number,
-initialLng: PropTypes.number,
-initialZoom: PropTypes.number,
-aiAgentUrl: PropTypes.string,
-agentFlowUrl: PropTypes.string,
-rmDark: PropTypes.bool,
-// Command Center hook: the layer and what the app draws on the map (see RmLayerContext).
-rmLayer: PropTypes.shape({
-name: PropTypes.oneOf(['locations', 'service']),
-content: PropTypes.node,
-controls: PropTypes.node,
-pinFilter: PropTypes.func,
-pinFilterKey: PropTypes.string,
-detailKey: PropTypes.string,
-onDetail: PropTypes.func,
-}),
-};
 
 export default RestaurantMapVisualization;

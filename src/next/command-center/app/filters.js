@@ -6,7 +6,7 @@
  */
 import { useEffect, useState } from 'react';
 
-const STORAGE_KEY = 'ccTimeZone';
+const STORAGE_KEY = 'mcd-nextcommandcenter-app.timeZone';
 
 function browserTimeZone() {
   try {

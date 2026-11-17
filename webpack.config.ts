@@ -38,7 +38,7 @@ const readEnvVariable = (name: string) =>
  */
 const appEnv = (production: boolean) => ({
   'process.env.GOOGLE_MAPS_API_KEY': JSON.stringify(
-    production ? (process.env.GOOGLE_MAPS_API_KEY ?? '') : readEnvVariable('GOOGLE_MAPS_API_KEY')
+    production ? '' : readEnvVariable('GOOGLE_MAPS_API_KEY')
   ),
 });
 

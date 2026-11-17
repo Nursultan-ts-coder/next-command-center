@@ -23,7 +23,16 @@
     ],
     "version": "%VERSION%",
     "updated": "%TODAY%",
-    "links": []
+    "links": [
+      {
+        "name": "Source code",
+        "url": "https://github.com/Nursultan-ts-coder/next-command-center"
+      },
+      {
+        "name": "Issues",
+        "url": "https://github.com/Nursultan-ts-coder/next-command-center/issues"
+      }
+    ]
   },
   "includes": [
     {

@@ -3,6 +3,8 @@
 The Restaurant NEXT Command Center inside Grafana: every NEXT store on a map, each store's 3D
 view and drive-thru, its orders, network, incidents and cases, and the Agent Q assistant.
 
+![Global map](https://raw.githubusercontent.com/Nursultan-ts-coder/next-command-center/main/src/img/screenshots/global.png)
+
 ## Features
 
 - **Global and segment maps**: every store as a pin coloured by its health, with a pop-up per store
@@ -22,7 +24,13 @@ and Agent C&R give example answers until an agent flow URL is set.
 
 ## Getting started
 
-1. Enable the app under **Administration → Plugins and data → Plugins → NEXT Command Center**.
+1. Install the app from the plugin catalog and enable it under **Administration → Plugins and data → Plugins → NEXT Command Center**.
 2. On its **Configuration** tab, enter the Google Maps API key (and optionally the agent flow URL)
    under **Map and agent settings** and save.
 3. Open it from **More apps → NEXT Command Center**.
+
+## Support
+
+Report problems at https://github.com/Nursultan-ts-coder/next-command-center/issues.
+
+Developer notes: [DEVELOPMENT.md](https://github.com/Nursultan-ts-coder/next-command-center/blob/main/DEVELOPMENT.md).
